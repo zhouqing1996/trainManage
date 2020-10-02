@@ -1,0 +1,6 @@
+关于界面渲染刷新问题：例如从一个身份切换进另一个身份，但是上一个身份的界面还没有完全切换
+   flushCom: function () {
+            this.$router.go(0)
+        }
+此方法待改进
+build失败的原因：node包的版本有问题，解决办法：cnpm i optimize-css-assets-webpack-plugin@3.2.0

@@ -1,0 +1,114 @@
+此文档为api列表文档，归类填写
+
+****具体返回结果用接口测试工具试验
+
+模板说明
+/**
+ * @introduce  -----api功能介绍
+ * @apiUrl   -----api功能url
+ * @access_token no  -----api是否需要在url后面加access_token参数，如果需要则为'apiurl?access_token=XXXXXXXX'
+ * @author   ------api开发人
+ * @data   ------api开发时间
+ * @method   ------api传递方式
+ * @param   ------api传递参数，无则无参数
+ * @return json   ------api返回格式（通用）
+ * @returnParam   ------api返回data中的字段说明，无则data中无返回字段
+ */
+
+通用返回格式
+{
+    "code": 200,   ----请求状态
+    "data": null,   ----返回数据信息
+    "message": "退出登入"   ----返回状态信息
+}
+
+
+1、首页模块API
+
+1.1登入
+
+/**
+ * @introduce 登入
+ * @apiUrl \index\login
+ * @access_token no
+ * @author 陈敏
+ * @data  2018-07-25
+ * @method post
+ * @param string $username
+ * @param string $password
+ * @return json
+ * @returnParam string user  用户id 
+ * @returnParam string name  用户name
+ * @returnParam string kind  用户权限类型
+ * @returnParam string access_token  用户access_token
+ */
+
+
+1.2退出登入
+/**
+ * @introduce 登入
+ * @apiUrl \index\logout
+ * @access_token yes
+ * @author 陈敏
+ * @data  2018-07-25
+ * @method get
+ * @return json
+ */
+
+
+2、会议列表模块API
+=========================
+会议思考阶段：
+=========================
+会议准备阶段（Prepare）：
+
+2.2退出登入
+/**
+ * @introduce 登入
+ * @apiUrl \index\logout
+ * @access_token yes
+ * @author 陈敏
+ * @data  2018-07-25
+ * @method get
+ * @return json
+ */
+
+=========================
+会议开始前阶段阶段(before)：
+=========================
+会议开始阶段阶段(progress)：
+=========================
+会议结束后段阶段(after)：
+=========================
+
+3、会议编辑模块API
+
+4、宣传管理模块API
+
+5、缴费（财务）管理模块API
+
+6、后勤管理模块API
+
+7、成员管理模块API
+
+8、系统管理API
+
+8.1获取首页导航列表
+
+/**
+ * @introduce 
+ * @apiUrl \system\index\nav
+ * @access_token yes
+ * @author 陈敏
+ * @data  2018-07-30
+ * @method post
+ * @return json
+ * @returnParam string funcId  模块id 
+ * @returnParam string name  模块name
+ * @returnParam string url  模块url
+ * @returnParam string type  模块类型（是否为子模块）
+ * @returnParam string list  子模块列表
+ */
+
+
+9、数据统计管理API
